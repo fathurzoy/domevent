@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oxygen:wght@300;400;700&family=Prompt&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    user-select: none;
+    width: 100vw;
+    height: auto;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: ghostwhite;
+    font-family: 'Oxygen', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+    /* color inherit = mengikuti warna dari parrent */
+}
+
+.modalMenu {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.800);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    color: white;
+    z-index: 200;
+} 
+
+.modalMenu a{
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.modalMenu a:hover{
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: orange;
+}
+
+.navbar{
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: gray;
+    padding: 0 10%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.brand{
+    font-size: 1.4rem;
+    color: white;
+}
+
+.menuIcon {
+    color: white;
+    font-size: 2rem;
+    margin-left: auto;
+}
+
+.menuIcon:hover{
+    color: orange;
+}
+
+.closeIcon {
+    color: orangered;
+    font-size: 2rem;
+    position: fixed;
+    top: 20vh;
+    right: 10vw;
+}
+
+.closeIcon:hover{
+    font-size: 3rem;
+}
+
+.container section{
+    width: 100vw;
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.home{
+    background: #0f0c29;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.heroImage{
+    width: 250px;
+    height: 250px;
+    border-radius: 20px 20px 20px 200px;
+    object-fit: cover;
+    opacity: 0;
+    object-position: top;
+    animation-duration: 1s;
+    animation-name: bottomToTop;
+    /* mengambil function keyframe bottomToTop */
+    animation-iteration-count: 1;
+    /* animasi berapakali keluar/dilakukan */
+    animation-delay: .5s;
+    /* animasi delay */
+    animation-fill-mode: forwards;
+    /* ngasih ke animasi kemampuan mengganti default ke animasi akhir */
+}
+
+.heroText{
+    color: white;
+    font-size: 4rem;
+    opacity: 0;
+    animation-name: bottomToTop;
+    /* mengambil function keyframe bottomToTop */
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    /* animasi berapakali keluar/dilakukan */
+    animation-fill-mode: forwards;
+    /* ngasih ke animasi kemampuan mengganti default ke animasi akhir */
+}
+
+.about{
+    background-image: url(https://picsum.photos/seed/11/900);
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.gallery{
+    background-image: url(https://picsum.photos/seed/9/900);
+    justify-content: center;
+    align-items: center;
+}
+
+.galIcon{
+    font-size: 8rem;
+    color: white;
+    animation-name: infRotate;
+    /* mengambil function keyframe infRotate */
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    /* animasi berapakali keluar/dilakukan */    
+    animation-timing-function: linear;
+    /* muter searah jarum jam mutarnya linear alus*/
+}
+
+.contact{
+    background-image: url(https://picsum.photos/seed/10/900);
+}
+
+.footer{
+    width: 100vw;
+    height: 40vh;
+    display: flex;
+    padding: 0 10%;
+    padding-right: 0;
+    color: white;
+    background-color: black;
+}
+
+.left{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.right{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    background-color: gray;
+    padding-right: 10%;
+}
+
+.col1, .col2{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+}
+
+.formGroup{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.kirim{
+    width: 100%;
+    height: 30px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+}
+
+.aboutAlert{
+    width: 100vw;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: orange;
+    color: white;
+    position: sticky;
+    top: 10vh;
+    left: 0;
+}
+
+@keyframes bottomToTop{
+    from{
+        transform: translateY(20vh);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+        /* opacity cuma ada 0 dan 1 */
+    }
+}
+
+@keyframes infRotate {
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.test{
+    transform: rotate(360deg);
+}
