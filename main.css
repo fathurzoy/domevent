@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oxygen:wght@300;400;700&family=Prompt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700&display=swap');
 
 html {
     scroll-behavior: smooth;
@@ -17,7 +17,7 @@ body {
     padding: 0;
     overflow-x: hidden;
     background-color: ghostwhite;
-    font-family: 'Oxygen', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 a{
