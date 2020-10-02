@@ -20,6 +20,7 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+/* lebih baik dibuat default tag a untuk css */
 a{
     text-decoration: none;
     color: inherit;
@@ -59,7 +60,7 @@ a{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    background-color: black;
+    background-color: #0F1E25;
     padding: 0 40px;
     position: sticky;
     top: 0;
@@ -104,9 +105,7 @@ a{
 }
 
 .home{
-    background: #0f0c29;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-color: #000;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -155,7 +154,8 @@ a{
 }
 
 .about{
-    background-color: gray;
+    background-color: #232D36;
+    color: #fff;
     display: grid !important;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -172,7 +172,7 @@ a{
 
 .about_box1{
     grid-template: box1;
-    background-image: url(https://picsum.photos/seed/22000000000000/900);
+    background-image: url(https://picsum.photos/seed/24/900);
     background-size: cover;
     background-position: center;
     border-radius: 0 0 200px 0;
@@ -189,7 +189,7 @@ a{
 
 .about_box4{
     grid-template: box4;
-    background-image: url(https://picsum.photos/seed/220200000000/600);
+    background-image: url(https://picsum.photos/seed/22/600);
     background-size: cover;
     background-position: center;
     border-radius: 200px 0 0 0;
@@ -197,9 +197,27 @@ a{
 }
 
 .gallery{
-    background-image: url(https://picsum.photos/seed/9/900);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-gallery{
+    width: 100vw;
+    display: flex;
+    padding: 20px 40px !important;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    transition-duration: .5s;
+}
+.container-gallery img{
+    transition-duration: .5s;
+}
+.container-gallery img:hover{
+    border-radius: 200px;
+    object-fit: cover;
 }
 
 .galIcon{
@@ -225,11 +243,11 @@ a{
     padding: 0;
     padding-right: 0;
     color: white;
-    background-color: black;
+    background-color: #0F1E25;
 }
 
 .left{
-    background-color: gray;
+    background-color: #232D36;
     width: 30%;
     height: 100%;
     display: flex;
@@ -244,7 +262,7 @@ a{
     width: 70%;
     height: 100%;
     display: flex;
-    background-color: black;
+    background-color: #0F1E25;
     padding-right: 10%;
 }
 
